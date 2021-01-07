@@ -1,0 +1,134 @@
+@import '~antd/dist/antd.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+body {
+  background-color: #0773a3;
+}
+
+.ant-row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.ant-col:first-child {
+  padding-left: 0 !important;
+}
+
+.ant-col:last-child {
+  padding-right: 0 !important;
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: large;
+  color: #fffefa;
+}
+
+.title-alt {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: large;
+  color: #0773a3;
+}
+
+.text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #fffefa;
+}
+.text-alt {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #0773a3;
+}
+
+.text-italic {
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  color: #fffefa;
+}
+
+.Login-page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #0773a3;
+  font-family: 'Montserrat', sans-serif;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Home-page {
+  display: flex;
+  /* height: 100vh; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #0773a3;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.Login-input {
+  /* margin: 15px; */
+  width: 400px;
+  border-radius: 5px;
+}
+
+.Input {
+  width: 400px;
+  border-radius: 5px;
+}
+
+.Sign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Sign .Login-input {
+  width: 250px;
+}
+
+.button {
+  background-color: #e8c518;
+  border-radius: 5px;
+  width: 140;
+}
+
+.HomeThemes {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+.Banner {
+  height: 80px;
+  /* background-image: url("/images/MikeChickenRight.png"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+/* .Card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+} */
+
+.unSelected {
+  background-color: #fffefa;
+  /* width: 300; */
+}
+
+.Selected {
+  background-color: #e8c518;
+  /* width: 300; */
+}
