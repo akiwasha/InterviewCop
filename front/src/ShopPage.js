@@ -38,17 +38,6 @@ function ShopScreen({ username }) {
         message.success(
           'Vous avez maintenant accès à de nouvelles fonctionnalités!'
         );
-        //   <Alert
-        //   banner
-        //   message={
-        //     <TextLoop mask>
-        //       <div>Notice message one</div>
-        //       <div>Notice message two</div>
-        //       <div>Notice message three</div>
-        //       <div>Notice message four</div>
-        //     </TextLoop>
-        //   }
-        // />
       } else {
         setListErrors(body.error);
       }

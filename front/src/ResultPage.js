@@ -5,7 +5,6 @@ import { Redirect } from 'react-router-dom';
 import { Button, Col, Image, Modal, Rate, Row, Skeleton } from 'antd';
 import { connect } from 'react-redux';
 import { VictoryBar, VictoryChart, VictoryPie } from 'victory';
-// import { useIsFocused } from "@react-navigation/native";
 
 import MikeChickenLeft from './images/MikeChickenLeft.png';
 import badgeparfait from './images/badgeparfait.png';
@@ -28,7 +27,6 @@ function ResultPage({ username, score, detailedscore, job, county }) {
   );
   const [loadingAccountPage, setLoadingAccountPage] = useState(false);
 
-  //   const isFocused = useIsFocused();
   let trophy;
 
   useEffect(() => {
@@ -116,7 +114,6 @@ function ResultPage({ username, score, detailedscore, job, county }) {
       }
     };
     fetchData();
-    //   }, [isFocused]);
     // eslint-disable-next-line
   }, []);
 
@@ -190,11 +187,11 @@ function ResultPage({ username, score, detailedscore, job, county }) {
             <Col xs={24}>
               <p className="title">Mon score</p>
             </Col>
-            <Col xs={24}>
+            <Col xs={24} style={{ marginBottom: '8px' }}>
               <Rate disabled defaultValue={rating} />
             </Col>
             {userPackage ? (
-              <Col xs={24}>
+              <Col xs={24} style={{ marginBottom: '8px' }}>
                 <Button
                   onClick={() => {
                     (userPackage.name === 'Free' ||
@@ -333,7 +330,7 @@ function ResultPage({ username, score, detailedscore, job, county }) {
               <p className="text">
                 Bravo {username} ! C'était un entretien rondement mené !
               </p>
-              <Image src={MikeChickenLeft} width={50} />
+              <Image src={MikeChickenLeft} width={50} preview={false} />
             </Col>
             <Col xs={24}>
               <p className="text">Vous devriez vous perfectionner sur : </p>
@@ -346,8 +343,12 @@ function ResultPage({ username, score, detailedscore, job, county }) {
                   )
               )}
             </Col>
-            <Col xs={24}>
-              <Col xs={12}>
+            <Row
+              style={{
+                justifyContent: 'center',
+              }}
+            >
+              <Col xs={24} style={{ marginBottom: '8px' }}>
                 <Button
                   onClick={() => setLoadingAdvices(true)}
                   loading={loadingAdvices ? true : false}
@@ -355,7 +356,7 @@ function ResultPage({ username, score, detailedscore, job, county }) {
                   Voir les conseils
                 </Button>
               </Col>
-              <Col xs={12}>
+              <Col xs={24} style={{ marginBottom: '8px' }}>
                 <Button
                   onClick={() => setLoadingInterviewHomepage(true)}
                   loading={loadingInterviewHomepage ? true : false}
@@ -363,7 +364,7 @@ function ResultPage({ username, score, detailedscore, job, county }) {
                   Refaire un entretien !
                 </Button>
               </Col>
-            </Col>
+            </Row>
             <Col xs={24}>
               <Button
                 type="primary"
@@ -384,9 +385,9 @@ function ResultPage({ username, score, detailedscore, job, county }) {
               }}
               onCancel={handleCancelModalTwo}
             >
-              <Row>
+              <Row style={{ textAlign: 'center' }}>
                 <Col xs={24}>
-                  <p className="title">
+                  <p className="title-alt">
                     Vous avez gagné le trophée {'\n'} {lastTrophy.name}
                   </p>
                 </Col>
